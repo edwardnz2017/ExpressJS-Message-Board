@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <header>
+      <h1><%= title %></h1>
+    </header>
+    <p>Welcome to <%= title %></p>
+    <a href="/new">Post a new message</a>
+    <div id="post-container">
+      <% messages.forEach(result => { %>
+        <div class="post-box">
+          <div class='post-info'> <%=result.text%> </div>
+          <div class='user-info'> <%=result.user%> </div>
+          <div class='date-info'> <%=result.added%> </div>
+        </div>
+      <% }) %>
+    </div>
+  </body>
+</html>

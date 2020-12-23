@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <header>
+        <h1><%= title %></h1>
+    </header>
+    <h2> <%= subTitle %></h2>
+    <form method="POST" action="/new"> 
+        <fieldset>
+            <label>
+                Name:
+                <input type="text" name='messageUser'>
+            </label>
+            <label>
+                Message:
+                <textarea rows="4" cols="70" name="messageText"></textarea>
+            </label>
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+    <button><a href="/">Go Back</a></button>
+  </body>
+</html>
